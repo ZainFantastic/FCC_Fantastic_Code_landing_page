@@ -1,0 +1,93 @@
+:root
+{
+  /* colors */
+  --prime-color:#333333;
+  --second-color:#06AAF4;
+  --light-bg:#ffffff;
+  --dark-bg:#f6f6f6;
+  --red-box:#B33939;
+  --blue-box:#227093;
+  --green-box:#218C74;
+  --progress:#03a9f4;
+  --no-progress:#ffffff;
+
+  /* font */
+  --font-light:Poppins-Light;
+  --font-reg:Poppins-Regular;
+  --font-semiBold:Poppins-SemiBold;
+  --font-Bold:Poppins-Bold;
+  --font-exBold:Poppins-ExtraBold;
+
+  /* line height */
+  --line-height:1.7;
+  /* padding */
+  --padding:3.5rem;
+
+  /* margin */
+  --margin:1rem;
+}
+
+
+
+/* flex */
+.flex-row-jc-ac{
+  display:flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col-jc-ac{
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* grid */
+.grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+}
+
+
+/* container */
+.container{ 
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* small screen */
+@media all and (min-width:768px){
+
+  .container{
+    width:750px;
+  }
+}
+
+/* medium*/
+@media all and (min-width:992px){
+
+  .container{
+    width:970px;
+  }
+}
+
+/* large */
+@media all and (min-width:1200px){
+
+  .container{
+    width:1170px;
+  }
+}
+  
+/* extra large */
+@media all and (min-width:1400px){
+
+  .container{
+    width:1320px;
+  }
+}
