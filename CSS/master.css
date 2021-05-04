@@ -109,64 +109,55 @@ li a:hover{
   background-color:var(--dark-bg);
   text-align: left;
 }
+
+.about-us .box{
+  flex-wrap:wrap;
+}
+.about-us .box>*{
+  flex: 1 1 500px;
+}
 .about-us .team-img{
   max-width:100%;
   height: auto;
-  margin: 0 var(--margin);
 }
 .about-us-text h2{
   margin-bottom:1rem;
 }
 
-/* portfolio */
 
-.portfolio
-{
+/* portfolio */
+.portfolio{
   width:100%;
-  height:250px;
-  display:flex;
-  flex-flow:row nowrap;
-  align-items:center;
-  justify-content:center;
+  flex-wrap:wrap !important;
+  padding:var(--padding);
+  margin:var(--margin) 0;
 }
-  .box-one ,.box-two ,.box-three
-  {
-    padding-top:10px;
-    margin-left:15px;
-    text-align:center;
-  }
-    .box-one h2 ,.box-two h2 ,.box-three h2
-    {
-      color:white;
-      font-size:2.3em;
-      margin:0px;
-    }
-    .box-one p ,.box-two p ,.box-three p
-    {
-      color:white;
-      font-size:80%;
-      margin:0px;
-  }
-  .box-one 
-  {
-    width:235px;
-    height:100px;
-    background-color:var(--r-box)
-  }
-  
-  .box-two
-  {
-    width:235px;
-    height:100px;
-    background-color: var(--b-box);
-  }
-  
-  .box-three
-  {
-    width:235px;
-    height:100px;
-    background-color: var(--g-box);
-  }
+.box-one ,.box-two ,.box-three{
+  padding:var(--padding);
+  margin: var(--margin);
+  text-align:center;
+  flex:1 1 250px;
+}
+.box-one h2 ,.box-two h2 ,.box-three h2{
+  color:#fff;
+  font-size:3.5rem;
+  letter-spacing:3px;
+}
+.box-one p ,.box-two p ,.box-three p{
+  color:#fff;
+  font-size:1.1rem;
+  letter-spacing:3px;
+  font-family: var(--font-light);
+}
+.box-one {
+  background-color:var(--red-box)
+}
+.box-two{
+  background-color: var(--blue-box);
+}
+.box-three{
+  background-color: var(--green-box);
+}
 
 /* skills */
 
@@ -554,7 +545,7 @@ footer
 
                                   /* tablet 700px */
 
-@media all and (min-width:375px) and (max-width:700px){
+@media all and (min-width:3705px) and (max-width:7000px){
   .container
   {
     margin:0px ;
@@ -758,4 +749,3 @@ footer
       font-size:1.2em
     }
   }
-
