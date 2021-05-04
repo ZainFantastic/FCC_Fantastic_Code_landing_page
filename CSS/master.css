@@ -83,11 +83,17 @@ li a:hover{
 /* features */
 .features{
   width:100%;
+  text-align: center;
+  margin:var(--margin);
+  align-items:baseline;
+}
+.features section h3{
+  margin:1rem 0;
 }
 
-
 .icon>img{
-
+  max-width: 100%;
+  height:auto;
 }
 
 /* about us */
