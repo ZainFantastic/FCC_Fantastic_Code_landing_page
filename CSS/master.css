@@ -12,6 +12,7 @@ body{
   line-height:var(--line-height);
   padding:0px;
   margin:0px;
+  overflow-x: hidden;
 }
 
 h1 , h2 , h3 , p , li{
@@ -35,7 +36,7 @@ a{
 /* header */
 header{
   width: 100%;
-  padding: 1.5rem 0;
+  padding: var(--padding) 0;
   display:flex;
   justify-content: space-between;
 }
@@ -69,7 +70,7 @@ li a:hover{
 /* intro */
 .intro{
   width:100%;
-  padding:var(--section-padding);
+  padding:var(--section-padding) 0;
   background-color:var(--dark-bg);
   text-align:center;
 }
@@ -114,7 +115,7 @@ li a:hover{
   flex-wrap:wrap;
 }
 .about-us .box>*{
-  flex: 1 1 500px;
+  flex: 1 1 450px;
 }
 .about-us .team-img{
   max-width:100%;
@@ -163,7 +164,7 @@ li a:hover{
 /* skills */
 .skills{
   width:100%;
-  padding:var(--section-padding);
+  padding:var(--section-padding) 0;
   background-color:var(--dark-bg);
   text-align:center;
   font-family: var(--font-Bold);
@@ -227,511 +228,24 @@ footer{
 }
 footer>p{
   width:100%;
-  text-align: center;
-  color:white;
   margin:0px;
+  font-size: 0.9rem;
+  text-align: center;
+  color:#fff;
 }
 footer p >span{
   color:var(--second-color);
 }
 
-
-                                    /* mobile 375px */
-
-@media all and (min-width:1px) and (max-width:375px){
-  .container
-  {
-    margin:0px ;
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows:repeat(9 , 1fr) ;
-    grid-template-areas: "header" "intro" "features" "features" "features" "about-us" "portfolio" "skills" "footer" ;
-    place-items: center;
-    grid-gap:0px;
-  }
-
+/* small screen devices max width 768px */
+@media all and (max-width:768px){
   
   /* header */
-  
-  header
-  {
-    width: 100%;
-    height:100%;
-    grid-area: header;
-    background-image: linear-gradient( 179.4deg,  rgba(12,20,69,1) -16.9%, rgba(71,30,84,1) 119.9% );
-    }
-    .logo
-    {
-      width:100%;
-      padding:0px;
-      height: 100px;
-      margin-bottom: 70px;
-      margin-top: 30px;
-      font-size: 1.2em;
-      color:white;
-      text-transform: lowercase;
-      display: flex;
-      flex-flow:row wrap;
-      justify-content: center;
-      position: relative;
-    }
-    .logo::before
-    {
-     content: "";
-     background-color: transparent;
-     border: 10px solid;
-     border-color: var(--s-color) transparent transparent transparent;
-     position: absolute;
-     bottom: -40%;
-    }
-
-    .nav
-    {
-      height: 280px;
-      width:100%;
-      padding: 0px;
-      margin:0px;
-      list-style-type: none;
-      text-align: center;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-
-    }
-      li {
-        width: 100%;
-        height:70px;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        background-color: black;
-      }
-        
-        li a:link
-        {
-          text-decoration:none;
-          color:white;
-          width: 100%;
-          height:70px;
-          display: flex;
-          justify-content: center;
-          align-items:center;
-        }
-        li a:visited
-        {
-          text-decoration:none;
-          color:white;
-        }
-        li a:hover
-        {
-          background-color:var(--s-color);
-          color:black;
-          border-radius: 0px;
-        }
-        li a:active
-        {
-          background-color:#6dd3ff;
-        }
-  
-  /* intro */
-  
-  .intro
-  {
-    width:100%;
-    grid-area: intro;
-    height:500px;
-  }
-    .intro h1
-    {
-      padding:0px;
-      margin: 10px;
-    }
-    .intro p
-    {
-     padding:0px 20px;
-      width:100%;
-      margin:0px;
-    }
-  
-  /* features */
-  
-  .features
-  {
-    width:100%;
-    height:100%;
-    grid-area: features;
-    display:flex;
+  header{
     flex-flow:column wrap;
-    justify-content: space-around;
-    align-items:center;
+    align-items: center;
   }
-   
-  .features>section
-  {
-    width:100%;
-    height:500px;
-    display: block;
-    margin:15px auto;
-    line-height:3em;
-    border-bottom: 1px dotted gray;
+  header nav ul{
+    margin-top:var(--margin);
   }
-    .features>.third
-    {
-      border-bottom:0px;
-    }
-    .icon>img
-    {
-      width:200px;
-      height:150px;
-      margin-top: 20px;
-      margin-bottom:50px;
-    }
-  
-  /* about us */
-  
-  .about-us
-  {
-    width:100%;
-    grid-area: about-us;
-    height:500px;
-    background-color:var(--s-row);
-    display:flex;
-    flex-flow:column wrap;
-    align-items:center;
-    justify-content:flex-start;
-  
-  }
-  
-    .about-us>section
-    {
-      width:100%
-    }
-      .team-img>img
-     {
-       width: 100%;
-     }
-      .about-us-text , .about-us-text>p
-      {
-      text-align:center;
-      line-height: 1.5em;
-      font-size:90%;
-      }
-  .team-img
-  {
-    order:2;
-  }
-
-  /* portfolio */
-  
-  .portfolio
-  {
-    width:100%;
-    height:100%;
-    grid-area: portfolio;
-    display:flex;
-    flex-flow:column wrap;
-    align-items:center;
-    justify-content:space-around;
-  }
-    .box-one ,.box-two ,.box-three
-    {
-      width:90%;
-      margin-left:0px;
-      padding:0px;
-      border-radius: 5px;
-    }
-      .box-one h2 ,.box-two h2 ,.box-three h2
-      {
-        font-size:3em;
-        margin:0px;
-        text-align: center;
-      }
-      .box-one p ,.box-two p ,.box-three p
-      {
-        font-size:90%;
-        margin:0px;
-        text-align: center;
-    }
-  /* skills */
-  
-  .skills
-  {
-    width:100%;
-    grid-area: skills;
-    height:100%;
-  }
-  .langs
-  {
-    width:85%;
-    height:75%;
-    padding-bottom: 60px;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-evenly;
-    align-items: flex-end;
-    }
-    .langs>div
-    {
-      position:relative;
-      padding:5px;
-     }
-      .langs>div:before
-      {
-      transform: rotate(-90deg);
-      width:130px;
-      font-size:0.9em;
-      bottom: -80px;
-      left:-105%;
-      }
-  
-      .html
-      {
-        height:60% ;
-        width: 15% !important;
-      }
-      .css
-      {
-        height:70% ;
-        width: 15% !important
-      }
-      .javascript
-      {
-        height:80% ;
-        width: 15% !important
-      }
-      .php
-      {
-        height:65% ;
-        width: 15% !important
-      }
-      .python
-      {
-        height:90% ;
-        width: 15% !important
-      }
-  
-  /* footer */
-  
-  footer
-  {
-    width:100%;
-    height:100%;
-    grid-area: footer;
-    align-self:flex-start;
-    flex-flow :column wrap;
-  }
-    footer>p
-    {
-      width:100%;
-      font-size:1.2em
-
-    }
 }
-
-                                  /* tablet 700px */
-
-@media all and (min-width:3705px) and (max-width:7000px){
-  .container
-  {
-    margin:0px ;
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows:repeat( 7 , 1fr) ;
-    grid-template-areas: "header" "intro" "features" "about-us" "portfolio" "skills" "footer" ;
-    place-items: center;
-    grid-gap:0px;
-  }
-
- /* header */
-    header
-    {
-      width: 100%;
-      height:100%;
-      background-image: linear-gradient( 179.4deg,  rgba(12,20,69,1) -16.9%, rgba(71,30,84,1) 119.9% );  }
-
-      .logo
-      {
-      width:100%;
-      padding:0px;
-      height: 100px;
-      margin-bottom: 70px;
-      margin-top: 30px;
-      font-size: 1.2em;
-      color:white;
-      text-transform: lowercase;
-      display: flex;
-      flex-flow:row wrap;
-      justify-content: center;
-      position: relative;
-    }
-    .logo::before
-    {
-     content: "";
-     background-color: transparent;
-     border: 10px solid;
-     border-color: var(--s-color) transparent transparent transparent;
-     position: absolute;
-     bottom: -40%;
-    }
-
-    .nav
-    {
-      height: 280px;
-      width:100%;
-      padding: 0px;
-      margin:0px;
-      list-style-type: none;
-      text-align: center;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-
-    }
-      li {
-        width: 100%;
-        height:70px;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        background-color: black;
-      }
-        
-        li a:link
-        {
-          text-decoration:none;
-          color:white;
-          width: 100%;
-          height:70px;
-          display: flex;
-          justify-content: center;
-          align-items:center;
-        }
-        li a:visited
-        {
-          text-decoration:none;
-          color:white;
-        }
-        li a:hover
-        {
-          background-color:var(--s-color);
-          color:black;
-          border-radius: 0px;
-        }
-        li a:active
-        {
-          background-color:#6dd3ff;
-        }
-        
-    .intro h1
-    {
-      margin: 5px;
-      padding-top:20px;
-    }
-    .intro p
-    {
-     padding:0px 20px;
-      width:100%;
-      margin:0px;
-    }
-
-/* features */
-
-.features>section 
-{
-  width:31%
-}
-
-/* about us */
-    .about-us
-  {
-    width:100%;
-
-    height:500px;
-    background-color:var(--s-row);
-    display:flex;
-    flex-flow:column wrap;
-    align-items:center;
-    justify-content:flex-start;
-  
-  }
-  
-    .about-us>section
-    {
-      width:100%
-    }
-      .team-img>img
-     {
-       width: 100%;
-     }
-      .about-us-text , .about-us-text>p
-      {
-      text-align:center;
-      line-height: 1.5em;
-      font-size:95%;
-      padding: 15px;
-      }
-  .about-us>.team-img
-  {
-    order:2;
-    width:60%;
-  }
-
-  /* portfolio */
-
-  .portfolio
-  {
-    width:100%;
-    height:100%;
-    grid-area: portfolio;
-    display:flex;
-    flex-flow:column wrap;
-    align-items:center;
-    justify-content:center;
-  }
-    .box-one ,.box-two ,.box-three
-    {
-      width:100%;
-      margin: auto auto;
-      padding:0px;
-      height:calc(100% /3);
-      border-radius: 0px;
-      display:flex;
-      flex-flow:row wrap;
-      justify-content: center;
-      align-items: center;
-    }
-      .box-one h2 ,.box-two h2 ,.box-three h2
-      {
-        font-size:4em;
-        margin:0px;
-      }
-      .box-one p ,.box-two p ,.box-three p
-      {
-        font-size:1.5em;
-        padding-left:15px;
-        letter-spacing:5px;
-    }
-    
-  /* skills */
-    .langs
-    {
-      padding-left:50px;
-      }
-
-    /* footer */
-    footer
-  {
-    width:100%;
-    height:100%;
-    grid-area: footer;
-    align-self:flex-start;
-    flex-flow :column wrap;
-  }
-    footer>p
-    {
-      width:100%;
-      font-size:1.2em
-    }
-  }
