@@ -465,6 +465,6 @@ footer>p{
   text-align: center;
   color:#fff;
 }
-footer p >span{
+footer p > a{
   color:var(--second-color);
 }
