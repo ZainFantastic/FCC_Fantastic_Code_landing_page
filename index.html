@@ -17,45 +17,49 @@
 <body dir="ltr">
   <div class="wrapper">
     <!-- navegate bar -->
-    <header id="header" class="container">
-      <div class="logo-box">
-       <a class="logo flex-row-jc-ac" href="#">
-        <h2> &lt;Fantastic_Code/&gt;</h2>
-        <img id="header-img" src="assests/coding.svg">
-       </a>
+    <header id="header">
+      <div class="header-box container">
+        <div class="logo-box">
+          <a class="logo flex-row-jc-ac" href="#">
+            <h2> &lt;Fantastic_Code/&gt;</h2>
+            <img id="header-img" src="assests/coding.svg">
+          </a>
+        </div>
+        <nav id="nav-bar">
+          <ul class="flex-row-jc-ac">
+            <li><a class="nav-link" href="#home">home</a></li>
+            <li><a class="nav-link" href="#services">services</a></li>
+            <li><a class="nav-link" href="#about-us">about us</a></li>
+            <li><a class="nav-link" href="#skills">our skills</a></li>
+            <li><a class="nav-link" href="#">contact us</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="nav-bar">
-        <ul class="flex-row-jc-ac">
-          <li><a class="nav-link" href="#header">home</a></li>
-          <li><a class="nav-link" href="#intro">who we are</a></li>
-          <li><a class="nav-link" href="#about-us">about us</a></li>
-          <li><a class="nav-link" href="#skills">our skills</a></li>
-          <li><a class="nav-link" href="#">contact us</a></li>
-        </ul>
-      </nav>
     </header>
       
     <!-- intro -->
-    <article id="intro" class="intro">
+    <article id="home" class="intro">
       <div class="video-box">
-        <video muted autoplay loop>
+        <video id="video" muted autoplay loop>
           <source src="assests/website-intro-video.mp4" type="video/mp4">
         </video>
         <div class="layer"></div>
       </div>
         <div class="text-box ">
-          <h1>Fantastic codes <span>services</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-            elit. Fugit repellat quo impedit dicta minus, 
-            vero officia inventore eligendi totam ex iste quibusdam 
-            quisquam voluptates, praesentium corporis non incidunt mollitia enim. 
-            Optio, repellendus maiores ipsam minus ducimus suscipit ipsa porro fuga 
-            veritatis quia quibusdam commodi distinctio et soluta magnam laborum 
-          </p>
+          <div class="container">
+            <h1>Fantastic codes <span>services</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing 
+              elit. Fugit repellat quo impedit dicta minus, 
+              vero officia inventore eligendi totam ex iste quibusdam 
+              quisquam voluptates, praesentium corporis non incidunt mollitia enim. 
+              Optio, repellendus maiores ipsam minus ducimus suscipit ipsa porro fuga 
+              veritatis quia quibusdam commodi distinctio et soluta magnam laborum 
+            </p>
+          </div>
         </div>
     </article>
     <!-- features -->
-    <article class="features container flex-row-jc-ac">
+    <article id="services" class="features container flex-row-jc-ac">
       <section class="first flex-col-jc-ac">
         <div class="icon"><img src="assests/web_design.png"></div>
         <h3>design quality</h3>
