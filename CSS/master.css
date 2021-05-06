@@ -132,12 +132,12 @@ li a:hover{
   }
 }
 
-.intro h1{
+.main-heading{
   font-family: var(--font-Bold);
   font-size:2rem;
   margin-bottom:1rem;
 }
-.intro h1>span{
+.main-heading .blue{
   color:var(--second-color)
 }
 .intro p{
@@ -372,8 +372,8 @@ li a:hover{
   box-shadow: 0 0 15px rgba(0,0,0,0.35);
 }
 
-/* for mobile screens with max width 576px */
-@media all and (max-width:576px){
+/* small screen devices max width 768px */
+@media all and (max-width:768px){
   .pricing-block .plan:hover{
     transform: none;
     box-shadow: none;
@@ -386,6 +386,66 @@ li a:hover{
     transform: scale(1.035);
     box-shadow: 0 0 15px rgba(0,0,0,0.35);
   }
+}
+
+
+/* contact us */
+.contact-us{
+  width:100%;
+  background-color: var(--dark-bg);
+  padding:var(--section-padding);
+  font-size: rem;
+  text-align: center;
+}
+.contact-us .blue{
+  font-size: 1.65rem;
+  font-family: var(--font-light);
+}
+.contact-us form{
+  margin: var(--margin) auto;
+}
+
+/* small screen devices max width 768px */
+@media all and (max-width:768px){
+  .contact-us form{
+   flex-flow:column wrap;
+  }  
+  .contact-us form #email,
+  .contact-us form #submit{
+    width:100% !important;
+  }
+}
+
+.contact-us form #email{
+  width: 50%;
+  padding: 0.75rem;
+  background-color: transparent;
+  font-family: var(--font-semiBold);
+  border: none;
+  border-bottom:1px solid var(--prime-color);
+  outline: none;
+  transition: all 0.25s ease-in;
+}
+
+.contact-us form #email:focus{
+  border-bottom-color: var(--second-color);
+}
+.contact-us form #submit{
+  margin:1rem ;
+  font-size: 1.15rem;
+  font-family: var(--font-semiBold);
+  background-color: var(--second-color);
+  border:var(--second-color);
+  border-radius:0.25rem;
+  color:#fff;
+  width: 20%;
+  padding: 0.75rem;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+.contact-us form #submit:hover{
+  background-color: #099de2;
+  cursor: pointer;
 }
 
 
