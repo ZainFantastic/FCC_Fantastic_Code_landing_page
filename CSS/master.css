@@ -39,7 +39,7 @@ header{
   max-height:200px;
   background-color:var(--light-bg);
   box-shadow: 0 10px 10px rgba(0,0,0,0.05);
-  position:sticky;
+  position:fixed;
   top:0;
   left:0;
   z-index:1000;
@@ -60,6 +60,7 @@ header .header-box nav ul{
   margin:0px;
   list-style-type: none;
   text-align: center;
+  font-size:0.85rem;
 }
 header .header-box nav ul li a{
   display:block;
@@ -120,17 +121,13 @@ li a:hover{
 .intro .text-box{
   width:100%;
   height:100%;
+  padding:var(--padding) 0 ;
   position: absolute;
-  top:10%;
+  top:0;
   left:0;
+  overflow-Y:auto;
 }
 
-/* small screen devices max width 768px */
-@media all and (max-width:768px){
-  .intro .text-box{
-    top:5%;
-  }
-}
 
 .main-heading{
   font-family: var(--font-Bold);
@@ -142,6 +139,7 @@ li a:hover{
 }
 .intro p{
   width:90%;
+  font-size: 1.65vh;
   margin:auto;
   line-height:2.5;
   font-family: var(--font-semiBold);
@@ -185,7 +183,7 @@ li a:hover{
 .about-us .box>*{
   flex: 1 1 450px;
 }
-.about-us .team-img{
+.about-us .team-img>img{
   max-width:100%;
   height: auto;
 }
